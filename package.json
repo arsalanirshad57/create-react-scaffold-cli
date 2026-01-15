@@ -16,7 +16,7 @@
     "react-architecture"
   ],
   "author": "Muhammad Arsalan",
-  "license": "ISC",
+  "license": "MIT",
   "description": "A CLI to scaffold a feature-first React application with clear boundaries and long-term maintainability.",
   "dependencies": {
     "commander": "^14.0.2",
