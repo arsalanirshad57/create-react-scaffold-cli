@@ -1,0 +1,35 @@
+{
+  "name": "create-react-scaffold-cli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "react",
+    "scaffold",
+    "boilerplate",
+    "vite",
+    "frontend",
+    "create-app",
+    "react-architecture"
+  ],
+  "author": "Muhammad Arsalan",
+  "license": "ISC",
+  "description": "A CLI to scaffold a feature-first React application with clear boundaries and long-term maintainability. ",
+  "dependencies": {
+    "commander": "^14.0.2",
+    "execa": "^9.6.1",
+    "fs-extra": "^11.3.3",
+    "prompts": "^2.4.2"
+  },
+  "bin": {
+    "create-react-scaffold": "bin/index.js"
+  },
+  "files": [
+    "bin",
+    "scripts",
+    "templates"
+  ]
+}
