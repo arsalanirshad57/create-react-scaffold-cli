@@ -17,7 +17,7 @@
   ],
   "author": "Muhammad Arsalan",
   "license": "ISC",
-  "description": "A CLI to scaffold a feature-first React application with clear boundaries and long-term maintainability. ",
+  "description": "A CLI to scaffold a feature-first React application with clear boundaries and long-term maintainability.",
   "dependencies": {
     "commander": "^14.0.2",
     "execa": "^9.6.1",
@@ -25,7 +25,7 @@
     "prompts": "^2.4.2"
   },
   "bin": {
-    "create-react-scaffold": "bin/index.js"
+    "create-react-scaffold-cli": "bin/index.js"
   },
   "files": [
     "bin",
