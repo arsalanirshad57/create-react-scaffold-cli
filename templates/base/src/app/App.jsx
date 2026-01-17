@@ -1,13 +1,13 @@
 import { Toaster } from '@/shared/ui';
 import { QueryProvider } from './providers';
+import { Router } from './Router';
+import { memo } from '@/shared/utils';
 
-function App({ children }) {
+export const App = memo(() => {
   return (
     <QueryProvider>
-      {children}
+      <Router />
       <Toaster />
     </QueryProvider>
   );
-}
-
-export default App;
+});

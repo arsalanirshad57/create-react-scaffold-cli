@@ -1,8 +1,8 @@
 import React from 'react';
-import { MutationCache, QueryCache, QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { AxiosError } from 'axios';
 import toast from 'react-hot-toast';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import { MutationCache, QueryCache, QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 export const QueryProvider = ({ children }) => {
   const [queryCache] = React.useState(
