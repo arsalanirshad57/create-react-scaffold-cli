@@ -26,10 +26,5 @@
   },
   "bin": {
     "create-react-scaffold-cli": "bin/index.js"
-  },
-  "files": [
-    "bin",
-    "scripts",
-    "templates"
-  ]
+  }
 }
