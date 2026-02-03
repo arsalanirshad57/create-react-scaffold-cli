@@ -2073,7 +2073,8 @@ export const size2xlLookup = {
 
 export const colorLookup = {
   primary: 'text-primary',
-  secondary: 'text-secondary',
+  ink: 'text-ink',
+  muted: 'text-muted',
   success: 'text-green-500',
   danger: 'text-red-500',
   white: 'text-white',
@@ -2082,7 +2083,8 @@ export const colorLookup = {
 
 export const color2XlLookup = {
   primary: '2xl:text-primary',
-  secondary: '2xl:text-secondary',
+  ink: '2xl:text-ink',
+  muted: 'xl:text-muted',
   success: '2xl:text-green-500',
   danger: '2xl:text-red-500',
   white: '2xl:text-white',
@@ -2091,7 +2093,8 @@ export const color2XlLookup = {
 
 export const colorXlLookup = {
   primary: 'xl:text-primary',
-  secondary: 'xl:text-secondary',
+  ink: 'xl:text-ink',
+  muted: 'xl:text-muted',
   success: 'xl:text-green-500',
   danger: 'xl:text-red-500',
   white: 'xl:text-white',
@@ -2100,7 +2103,8 @@ export const colorXlLookup = {
 
 export const colorLgLookup = {
   primary: 'lg:text-primary',
-  secondary: 'lg:text-secondary',
+  ink: 'lg:text-ink',
+  muted: 'lg:text-muted',
   success: 'lg:text-green-500',
   danger: 'lg:text-red-500',
   white: 'lg:text-white',
@@ -2109,7 +2113,8 @@ export const colorLgLookup = {
 
 export const colorMdLookup = {
   primary: 'md:text-primary',
-  secondary: 'md:text-secondary',
+  ink: 'md:text-ink',
+  muted: 'md:text-muted',
   success: 'md:text-green-500',
   danger: 'md:text-red-500',
   white: 'md:text-white',
@@ -2123,16 +2128,22 @@ export const bgColorLookup = {
   danger: 'bg-red-500',
 };
 
-export const fontFamilyLookup = {};
+export const fontFamilyLookup = {
+  'plus-jakarta-sans': 'font-plus-jakarta-sans',
+  inter: 'font-inter',
+};
 
-export const fontFamilyMdLookup = Object.fromEntries(
-  Object.entries(fontFamilyLookup).map(([k, v]) => [k, `md:${v}`])
-);
+export const fontFamilyMdLookup = {
+  'plus-jakarta-sans': 'md:font-plus-jakarta-sans',
+  inter: 'md:font-inter',
+};
 
-export const fontFamilyLgLookup = Object.fromEntries(
-  Object.entries(fontFamilyLookup).map(([k, v]) => [k, `lg:${v}`])
-);
+export const fontFamilyLgLookup = {
+  'plus-jakarta-sans': 'lg:font-plus-jakarta-sans',
+  inter: 'lg:font-inter',
+};
 
-export const fontFamilyXlLookup = Object.fromEntries(
-  Object.entries(fontFamilyLookup).map(([k, v]) => [k, `xl:${v}`])
-);
+export const fontFamilyXlLookup = {
+  'plus-jakarta-sans': 'xl:font-plus-jakarta-sans',
+  inter: 'xl:font-inter',
+};

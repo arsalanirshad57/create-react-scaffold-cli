@@ -14,6 +14,7 @@ import {
 } from '../theme';
 import { getClassName, memo } from '../utils';
 import { cn } from '../libs';
+import React from 'react';
 
 /**
  * @typedef {'base' | 'md' | 'lg' | 'xl'} Breakpoint

@@ -3,6 +3,7 @@ import { featureRoutes } from './routes.registry';
 import { AuthMiddleware } from './middlewares';
 import { Layouts } from '@/shared/constants';
 import { memo } from '@/shared/utils';
+import React from 'react';
 
 const layoutMap = {
   dashboard: null,
@@ -15,13 +16,20 @@ export const Router = memo(() => {
       <Routes>
         {featureRoutes.map((route, index) => {
           const Layout = layoutMap[route.layout ?? Layouts.None];
+          const Page = route.element;
 
-          let element = <Layout>{route.element}</Layout>;
+          let element = (
+            <Layout>
+              <Page />
+            </Layout>
+          );
 
           if (route.protected) {
             element = (
               <AuthMiddleware>
-                <Layout>{route.element}</Layout>
+                <Layout>
+                  <Page />
+                </Layout>
               </AuthMiddleware>
             );
           }
@@ -29,7 +37,7 @@ export const Router = memo(() => {
           return <Route key={index} path={route.path} element={element} />;
         })}
 
-        <Route path="/*" element={<Navigate to="/login" replace />} />
+        <Route path="/*" element={<Navigate to="/welcome" replace />} />
       </Routes>
     </BrowserRouter>
   );

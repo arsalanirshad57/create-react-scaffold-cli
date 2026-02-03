@@ -1,7 +1,6 @@
 import React from 'react';
 import { PiSpinnerBold } from 'react-icons/pi';
 import {
-  AnimationLookup,
   colorLookup,
   fieldSize2XlLookup,
   fieldSizeLgLookup,
@@ -25,13 +24,14 @@ import {
   radiusXlLookup,
 } from '../theme';
 import { getClassName, memo } from '../utils';
+import { cn } from '../libs';
 
 const variantLookup = {
   primary:
     'text-primary-foreground bg-primary hover:bg-primary/90 disabled:text-primary-foreground/70 disabled:bg-primary/50',
   outline:
     'border text-primary bg-primary-foreground hover:bg-neutral-50 disabled:text-primary/70 disabled:bg-neutral-50/50',
-  pill: 'text-primary-foreground bg-primary hover:bg-primary/90 disabled:text-primary-foreground/70 disabled:bg-primary/50 rounded-lg',
+  pill: 'text-primary-foreground bg-primary hover:bg-primary/90 disabled:text-primary-foreground/70 disabled:bg-primary/50',
 };
 
 /**
@@ -97,7 +97,6 @@ const Component = (
     color,
     isLoading,
     className,
-    animation,
     type = 'button',
     children,
     ...rest
@@ -108,7 +107,8 @@ const Component = (
     <button
       ref={ref}
       className={cn(
-        'h-12 px-4 w-full rounded-lg text-base font-inter font-semibold disabled:cursor-not-allowed transition-colors flex justify-center items-center',
+        'h-14 px-8 inline-flex w-full items-center justify-center gap-2 transition-colors disabled:cursor-not-allowed text-primary-foreground cursor-pointer!',
+        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30',
         typeof fontSize !== 'object' && getClassName(fontSize, fontSizeLookup),
         getClassName(fontSize?.base, fontSizeLookup),
         getClassName(fontSize?.md, fontSizeMdLookup),
@@ -135,7 +135,6 @@ const Component = (
         variantLookup[variant],
         fontFamilyLookup[font],
         colorLookup[color],
-        AnimationLookup[animation],
         className
       )}
       type={type}

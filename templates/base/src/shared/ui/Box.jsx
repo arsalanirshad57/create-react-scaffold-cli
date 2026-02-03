@@ -27,10 +27,6 @@ import {
   paddingXXlLookup,
   paddingYXlLookup,
   marginXlgLookup,
-  AnimationLookup,
-  AnimationMdLookup,
-  AnimationLgLookup,
-  AnimationXlLookup,
   radiusLookup,
   radiusMdLookup,
   radiusLgLookup,
@@ -122,15 +118,11 @@ import { cn } from '../libs';
  *   | Record<Axis, Record<Breakpoint, Padding>>} [padding]
  * @property {Width | Record<Breakpoint, Width>} [width]
  * @property {Radius} [radius]
- * @property {Animation} [animation]
  * @param {React.ComponentProps<'div'> & ComponentProps} props
  * @returns {JSX.Element}
  */
 
-const Component = (
-  { hide, grow, margin, radius, padding, width, animation, className, ...rest },
-  ref
-) => {
+const Component = ({ hide, grow, margin, radius, padding, width, className, ...rest }, ref) => {
   return (
     <div
       ref={ref}
@@ -180,11 +172,6 @@ const Component = (
         getClassName(width?.base, widthLookup),
         getClassName(width?.md, widthMdLookup),
         getClassName(width?.lg, widthLgLookup),
-        typeof font !== 'object' && getClassName(animation, AnimationLookup),
-        getClassName(animation?.base, AnimationLookup),
-        getClassName(animation?.md, AnimationMdLookup),
-        getClassName(animation?.lg, AnimationLgLookup),
-        getClassName(animation?.xl, AnimationXlLookup),
         typeof radius !== 'object' && getClassName(radius, radiusLookup),
         getClassName(radius?.base, radiusLookup),
         getClassName(radius?.md, radiusMdLookup),

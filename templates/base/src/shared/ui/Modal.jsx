@@ -2,6 +2,7 @@ import React from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { Scrollable } from './Scrollable';
 import { cn } from '../libs';
+import { memo } from '../utils';
 
 /**
  * @typedef {object} ComponentProps

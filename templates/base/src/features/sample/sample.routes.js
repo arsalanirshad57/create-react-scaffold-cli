@@ -1,12 +1,11 @@
-import React from 'react';
 import { Layouts } from '@/shared/constants';
-import { SampleNavigation } from './constants/sample.navigations';
 import { SamplePage } from './pages';
+import { SampleNavigation } from './constants';
 
 export const sampleRoutes = [
   {
     path: SampleNavigation.Sample,
-    element: <SamplePage />,
+    element: SamplePage,
     protected: true,
     layout: Layouts.None,
   },

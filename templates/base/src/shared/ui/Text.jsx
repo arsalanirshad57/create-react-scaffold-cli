@@ -24,7 +24,7 @@ import {
   colorXlLookup,
 } from '../theme';
 import { cn } from '../libs';
-import { getClassName } from '../utils';
+import { getClassName, memo } from '../utils';
 
 /**
  * @typedef {'base' | 'md' | 'lg' | 'xl' | '2xl'} Breakpoint
@@ -57,9 +57,9 @@ import { getClassName } from '../utils';
  *   | 'black'} Weight
  *
  *
- * @typedef {''} Font
+ * @typedef {'plus-jakarta-sans' | 'inter'} Font
  *
- * @typedef {'primary' | 'secondary' | 'success' | 'danger' | 'white' | 'black'} Color
+ * @typedef {'primary' | 'ink' | 'muted' | 'success' | 'danger' | 'white' | 'black'} Color
  *
  * @typedef {object} ComponentProps
  * @property {Size | Record<Breakpoint, Size>} [size]
