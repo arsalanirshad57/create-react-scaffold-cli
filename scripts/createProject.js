@@ -7,12 +7,18 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export async function createProject(name, options) {
-  const { installDeps } = options;
+  const { installDeps, language = 'javascript' } = options;
 
   const targetDir = path.resolve(process.cwd(), name);
-  const templateDir = path.resolve(__dirname, '../templates/base');
+
+  const templateFolder = language === 'typescript' ? 'base-ts' : 'base-js';
+
+  const templateDir = path.resolve(__dirname, `../templates/${templateFolder}`);
 
   console.log(`📁 Creating project: ${name}`);
+  console.log(
+    `🧩 Template: ${language === 'typescript' ? 'TypeScript' : 'JavaScript'}`,
+  );
 
   await fs.copy(templateDir, targetDir);
 

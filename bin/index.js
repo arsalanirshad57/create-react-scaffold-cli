@@ -12,23 +12,33 @@ async function init() {
       validate: (value) => (value ? true : 'Project name is required'),
     },
     {
+      type: 'select',
+      name: 'language',
+      message: 'Choose a language:',
+      choices: [
+        { title: 'JavaScript', value: 'javascript' },
+        { title: 'TypeScript', value: 'typescript' },
+      ],
+      initial: 0,
+    },
+    {
       type: 'toggle',
       name: 'installDeps',
       message: 'Do you want to install dependencies now?',
       initial: true,
-      active: 'yes',
-      inactive: 'no',
+      active: 'Yes',
+      inactive: 'No',
     },
   ]);
 
-  const { projectName, installDeps } = responses;
+  const { projectName, installDeps, language } = responses;
 
   if (!projectName) {
     console.log('❌ Project creation cancelled');
     process.exit(1);
   }
 
-  await createProject(projectName, { installDeps });
+  await createProject(projectName, { installDeps, language });
 }
 
 init();

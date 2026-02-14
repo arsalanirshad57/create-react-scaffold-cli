@@ -1,0 +1,37 @@
+@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@theme {
+  /* Colors */
+  --color-primary: #3452ff;
+  --color-primary-foreground: #ffffff;
+  --color-badge: #fef1a7;
+
+  --color-bg: #ffffff;
+  --color-surface: #f7f7f7;
+
+  --color-ink: #03003e;
+  --color-muted: #797979;
+
+  --color-ring: color-mix(in oklab, var(--color-primary) 35%, transparent);
+  --color-border: color-mix(in oklab, var(--color-ink) 10%, transparent);
+  --color-soft: color-mix(in oklab, var(--color-primary) 10%, transparent);
+
+  /* Fonts  */
+  --font-plus-jakarta-sans:
+    'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --font-inter: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+}
+
+:root {
+  color: var(--color-ink);
+  background: var(--color-bg);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-inter);
+}
